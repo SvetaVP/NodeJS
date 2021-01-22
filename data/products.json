@@ -1,20 +1,18 @@
-[
-  {
-    "title": "Sweet fresh stawberry",
-    "type": "fruit",
-    "description": "Sweet fresh stawberry on the wooden table",
-    "price": 29.45
-  },
-  {
-    "title": "Baking cake",
-    "type": "dairy",
-    "description": "Baking cake in rural kitchen - dough  recipe ingredients (eggs, flour, sugar) on vintage wooden table from above.",
-    "price": 11.14
-  },
-  {
-    "title": "Green beans",
-    "type": "vegetable",
-    "description": "Raw organic green beans ready to eat",
-    "price": 28.79
-  }
-]
+{
+  "title": "Sweet fresh stawberry",
+  "type": "fruit",
+  "description": "Sweet fresh stawberry on the wooden table",
+  "price": 29.45
+},
+{
+  "title": "Baking cake",
+  "type": "dairy",
+  "description": "Baking cake in rural kitchen - dough  recipe ingredients (eggs, flour, sugar) on vintage wooden table from above.",
+  "price": 11.14
+},
+{
+  "title": "Green beans",
+  "type": "vegetable",
+  "description": "Raw organic green beans ready to eat",
+  "price": 28.79
+},

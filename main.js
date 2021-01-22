@@ -1,21 +1,31 @@
 "use strict";
 
-const fs = require("fs");
+var fs = require("fs");
+const readFile = fs.promises.readFile;
+const appendFile = fs.promises.appendFile;
 
-function readJSON(filepath) {
-  return new Promise((resolve, reject) => {
-    fs.readFile(filepath, "utf8", (err, content) => {
-      if (err) {
-        reject(err);
-      } else {
-        try {
-          resolve(JSON.parse(content));
-        } catch (err) {
-          reject(err);
-        }
-      }
-    });
-  });
+let product = {
+  title: "Cactus",
+  type: "flowers",
+  description: "This cactus can bloom",
+  price: 28.64,
+};
+
+let data = JSON.stringify(product, null, 2);
+
+read();
+write();
+
+async function read() {
+  const readableData = await readFile("./data/products.json", "utf-8");
+  console.log(readableData);
 }
 
-readJSON("./data/products.json").then(console.log);
+async function write() {
+  const recordedData = await appendFile(
+    "./data/products.json",
+    data + ",\n",
+    "utf8"
+  );
+  console.log("Data written to file");
+}
